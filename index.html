@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Khushal Sharma</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+<header id="header">
+    <body id="container">
+    <p>KHUSHAL SHARMA</p>
+    <div class="main">
+        <i class="fa-brands fa-linkedin" style="color: #383838;"></i>
+        <i class="fa-brands fa-apple" style="color: #383838;"></i>
+        <i class="fa-brands fa-square-github" style="color: #262626;"></a></i>
+    </div>
+  
+</header>
+<header id = "header2">
+    <div class="root1">
+        <a href="#work">Work</a>
+        <a href="#info">Info</a>
+    </div>
+</header>
+ 
+    <div id="preloader">
+        <div id="preloader-content">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <section id="intro">
+        <h1>i'm khushal✌️<br>
+            Front-End Devloper unfolding stories<br> <span>@GitHub </span>through prototypes</h1>
+    </section>
+    <section id="work">
+        <div class="box">
+            <h2>Ray Tracing Model V1</h2>
+            <h3>Self, '2024 -- Making a accuarate Ray-Tracing Model using Python</h3>
+            <div class="img1">
+            <img src="image1.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Swift For IOS devlopment</h2>
+            <h3>Self, '23-25 -- Making and learning how to make Swift apps</h3>
+            <div class="img1">
+            <img src="image2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="dif1">
+            <h2>Languages Learned:</h2>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVA SCRIPT</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>C++ ROBOTICS</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="dif2">
+
+        
+        <h4>Hobbies:</h4>
+        <div class="box">
+            <h2>Lawn-Tennis</h2>
+            <h3>Self, '23-25 -- 2 Years of Pure Dedication And Racquet Collections</h3>
+            <div class="img1">
+            <img src="image3.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Science and Physics</h2>
+            <h3>Self, '20-25 -- 5 Years of Dedication for science,which was powring some of my projects. </h3>
+            <div class="img1">
+            <img src="image4.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+  
+    </section>
+
+   <section>
+    <div class="dif4">
+        <h4>WoW you've seen everything about me. <br><br>Lets Go Back:</h4>
+        <a href="#intro">Back</a>
+    </div>
+   </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+    </script>
+
+    <script>
+    window.addEventListener('load', () => {
+        const timeline = gsap.timeline();
+
+        // Preloader animation
+        timeline.to("#preloader-content p", { opacity: 0, duration: 1 });
+        timeline.to("#preloader", { height: 0, duration: 1, onComplete: () => {
+            document.getElementById('preloader').style.display = 'none';
+        }});
+
+        // Animate header elements
+        timeline.from("header", { opacity: 0, y: -50, duration: 1 });
+
+        // Animate section elements
+        timeline.from("#intro", { opacity: 0, y: 50, duration: 1 });
+        timeline.from(".box", { opacity: 0, y: 50, stagger: 0.2, duration: 1 });
+    });
+</script>
+
+</body>
+</html>
