@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Khushal Sharma</title>
-        <link rel="stylesheet" href="style.css">
+        
         <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,223 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
         <script src="main.js"></script>
     </head>
+<style>
+
+
+body {
+    margin-left: 170px;
+    height: 3900px;
+    background-color: #0E1011;
+    color: #DEDEDE;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: bolder;
+}
+
+p {
+    color: rgb(91, 90, 90);
+    letter-spacing: 2px;
+    margin-top:100px ;
+    margin-bottom: -30px;
+}
+
+.main {
+    display: flex;
+    justify-content: right;
+    margin-right: 170px;
+}
+
+i {
+    margin: 14px;
+    font-size: 2em;
+    border-radius: 40px;
+    transition-timing-function: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+}
+
+i:hover{
+    font-size: 3em;
+   
+    transition-timing-function: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.8em;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.box{ 
+    background-color: #1f2425;
+    width: 1000px;
+    padding: 30px;
+    border-radius: 40px;
+    font-size: 1.5em;
+    transition-timing-function: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+    animation: forbox;
+    animation-timeline: view();
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: .7em;
+    margin-top: -12px;
+    color: rgb(99, 95, 95);
+}
+
+
+.box img {
+    width: 600px;
+    border-radius: 44px;
+    margin-top: 25px;
+}
+
+.img1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;}
+
+.box:hover {
+    background: linear-gradient(to bottom right, rgb(16, 16, 74) , black);
+    transform: scale(105%);
+    transition-timing-function: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+}
+img{
+    transition-timing-function: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+}
+.box:hover img {
+   margin-top: -10px;
+   transition-timing-function: ease-in-out 300ms;
+   transition: ease-in-out 300ms;
+}
+@keyframes forbox {
+    from {
+        transform: scale(70%);
+        opacity: .5;
+    }
+    to {
+        transform: scale(105%);
+        opacity: 1;
+    }
+}
+span {
+    background-color: rgb(32, 32, 32);
+    width: 400px;
+    border-radius: 40px;
+}
+#header2 {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your needs */
+}
+
+.root1 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 170px;
+    height: 25px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px auto; /* Center the div */
+}
+
+.root1 a {
+    margin: 12px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.root1 a:hover {
+    color: #979797; /* Change color on hover */
+    transform: scale(90%);
+}
+
+
+.box1 {
+    margin: 100px;
+    border: 1px solid rgb(39, 39, 39);
+    width: 400px;
+    height: 250px;
+    padding: 34px;
+    border-radius: 40px;
+    background: linear-gradient(to bottom ,rgba(0, 0, 255, 0.537) ,  black, rgba(128, 0, 128, 0.587));   
+    animation: forbox1;
+    animation-timeline: view();
+    transition-timing-function: ease-in-out;
+    transition: ease-in-out;
+}
+@keyframes forbox1 {
+    from {
+        background: linear-gradient(to bottom ,rgba(7, 7, 119, 0.537) ,  rgb(150, 150, 150), rgba(128, 0, 128, 0.192)); 
+        transition-timing-function: ease-in-out;
+        transition: ease-in-out;  
+        scale: 0.2;
+    }
+
+    to {
+        background: linear-gradient(to bottom ,rgba(0, 0, 255, 0.537) ,  black, rgba(128, 0, 128, 0.587));   
+        transition-timing-function: ease-in-out;
+        transition: ease-in-out;
+
+    }
+}
+.box1 h3 {
+    font-size: 1.3em;
+    font-weight: lighter;
+    margin-top: -30px;
+}
+
+.box1 h4 {
+    text-align: right;
+}
+
+.dif1 h2{
+    font-size: 3rem;
+}
+
+.dif1 li {
+    font-size: 1.5em;
+    margin: 14px;
+    transition-timing-function: ease-in-out .5s;
+    transition: ease-in-out .5s;}
+.dif1 li:hover{
+    font-size: 2rem;
+    margin: 25px;
+    transition-timing-function: ease-in-out .5s;
+    transition: ease-in-out .5s;}
+
+
+.dif2 h4 {
+    font-size: 4rem;
+    margin-top: 200px;
+}
+
+.dif4 h4{
+    font-size: 7rem;
+}
+
+.dif4 a {
+    font-size: 3rem;
+    color: wheat;
+    margin-top: -170px;
+}
+
+</style>
+
 <header id="header">
     <body id="container">
     <p>KHUSHAL SHARMA</p>
