@@ -1,383 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Khushal Sharma</title>
-        
-        <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-        <script src="main.js"></script>
-    </head>
-<style>
-
-
-body {
-    margin-left: 170px;
-    height: 3900px;
-    background-color: #0E1011;
-    color: #DEDEDE;
-    font-family: 'Plus Jakarta Sans';
-    font-weight: bolder;
-}
-
-p {
-    color: rgb(91, 90, 90);
-    letter-spacing: 2px;
-    margin-top:100px ;
-    margin-bottom: -30px;
-}
-
-.main {
-    display: flex;
-    justify-content: right;
-    margin-right: 170px;
-}
-
-i {
-    margin: 14px;
-    font-size: 2em;
-    border-radius: 40px;
-    transition-timing-function: ease-in-out 300ms;
-    transition: ease-in-out 300ms;
-}
-
-i:hover{
-    font-size: 3em;
-   
-    transition-timing-function: ease-in-out 300ms;
-    transition: ease-in-out 300ms;
-}
-
-h1 {
-    font-weight: 600;
-    font-size: 2.8em;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-.box{ 
-    background-color: #1f2425;
-    width: 1000px;
-    padding: 30px;
-    border-radius: 40px;
-    font-size: 1.5em;
-    transition-timing-function: ease-in-out 300ms;
-    transition: ease-in-out 300ms;
-    animation: forbox;
-    animation-timeline: view();
-    margin-top: 50px;
-}
-
-h3 {
-    font-size: .7em;
-    margin-top: -12px;
-    color: rgb(99, 95, 95);
-}
-
-
-.box img {
-    width: 600px;
-    border-radius: 44px;
-    margin-top: 25px;
-}
-
-.img1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;}
-
-.box:hover {
-    background: linear-gradient(to bottom right, rgb(16, 16, 74) , black);
-    transform: scale(105%);
-    transition-timing-function: ease-in-out 300ms;
-    transition: ease-in-out 300ms;
-}
-img{
-    transition-timing-function: ease-in-out 300ms;
-    transition: ease-in-out 300ms;
-}
-.box:hover img {
-   margin-top: -10px;
-   transition-timing-function: ease-in-out 300ms;
-   transition: ease-in-out 300ms;
-}
-@keyframes forbox {
-    from {
-        transform: scale(70%);
-        opacity: .5;
-    }
-    to {
-        transform: scale(105%);
-        opacity: 1;
-    }
-}
-span {
-    background-color: rgb(32, 32, 32);
-    width: 400px;
-    border-radius: 40px;
-}
-#header2 {
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 100%;
-    max-width: 800px; /* Adjust based on your needs */
-}
-
-.root1 {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    width: 170px;
-    height: 25px;
-    padding: 12px;
-    text-align: center;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 10px auto; /* Center the div */
-}
-
-.root1 a {
-    margin: 12px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.root1 a:hover {
-    color: #979797; /* Change color on hover */
-    transform: scale(90%);
-}
-
-
-.box1 {
-    margin: 100px;
-    border: 1px solid rgb(39, 39, 39);
-    width: 400px;
-    height: 250px;
-    padding: 34px;
-    border-radius: 40px;
-    background: linear-gradient(to bottom ,rgba(0, 0, 255, 0.537) ,  black, rgba(128, 0, 128, 0.587));   
-    animation: forbox1;
-    animation-timeline: view();
-    transition-timing-function: ease-in-out;
-    transition: ease-in-out;
-}
-@keyframes forbox1 {
-    from {
-        background: linear-gradient(to bottom ,rgba(7, 7, 119, 0.537) ,  rgb(150, 150, 150), rgba(128, 0, 128, 0.192)); 
-        transition-timing-function: ease-in-out;
-        transition: ease-in-out;  
-        scale: 0.2;
-    }
-
-    to {
-        background: linear-gradient(to bottom ,rgba(0, 0, 255, 0.537) ,  black, rgba(128, 0, 128, 0.587));   
-        transition-timing-function: ease-in-out;
-        transition: ease-in-out;
-
-    }
-}
-.box1 h3 {
-    font-size: 1.3em;
-    font-weight: lighter;
-    margin-top: -30px;
-}
-
-.box1 h4 {
-    text-align: right;
-}
-
-.dif1 h2{
-    font-size: 3rem;
-}
-
-.dif1 li {
-    font-size: 1.5em;
-    margin: 14px;
-    transition-timing-function: ease-in-out .5s;
-    transition: ease-in-out .5s;}
-.dif1 li:hover{
-    font-size: 2rem;
-    margin: 25px;
-    transition-timing-function: ease-in-out .5s;
-    transition: ease-in-out .5s;}
-
-
-.dif2 h4 {
-    font-size: 4rem;
-    margin-top: 200px;
-}
-
-.dif4 h4{
-    font-size: 7rem;
-}
-
-.dif4 a {
-    font-size: 3rem;
-    color: wheat;
-    margin-top: -170px;
-}
-
-</style>
-
-<header id="header">
-    <body id="container">
-    <p>KHUSHAL SHARMA</p>
-    <div class="main">
-        <i class="fa-brands fa-linkedin" style="color: #383838;"></i>
-        <i class="fa-brands fa-apple" style="color: #383838;"></i>
-        <i class="fa-brands fa-square-github" style="color: #262626;"></a></i>
-    </div>
-  
-</header>
-<header id = "header2">
-    <div class="root1">
-        <a href="#work">Work</a>
-        <a href="#info">Info</a>
-    </div>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
  
-    <div id="preloader">
-        <div id="preloader-content">
-            <p>Loading...</p>
-        </div>
-    </div>
-    <section id="intro">
-        <h1>i'm khushal✌️<br>
-            Front-End Devloper unfolding stories<br> <span>@GitHub </span>through prototypes</h1>
-    </section>
-    <section id="work">
-        <div class="box">
-            <h2>Ray Tracing Model V1</h2>
-            <h3>Self, '2024 -- Making a accuarate Ray-Tracing Model using Python</h3>
-            <div class="img1">
-            <img src="image1.jpeg" alt="">
-            </div>
-        </div>
-
-        <div class="box">
-            <h2>Swift For IOS devlopment</h2>
-            <h3>Self, '23-25 -- Making and learning how to make Swift apps</h3>
-            <div class="img1">
-            <img src="image2.jpg" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section id="info">
-        <div class="dif1">
-            <h2>Languages Learned:</h2>
-            <ul>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVA SCRIPT</li>
-                <li>C</li>
-                <li>Java</li>
-                <li>C++ ROBOTICS</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <div class="dif2">
-
-        
-        <h4>Hobbies:</h4>
-        <div class="box">
-            <h2>Lawn-Tennis</h2>
-            <h3>Self, '23-25 -- 2 Years of Pure Dedication And Racquet Collections</h3>
-            <div class="img1">
-            <img src="image3.jpeg" alt="">
-            </div>
-        </div>
-
-        <div class="box">
-            <h2>Science and Physics</h2>
-            <h3>Self, '20-25 -- 5 Years of Dedication for science,which was powring some of my projects. </h3>
-            <div class="img1">
-            <img src="image4.jpeg" alt="">
-            </div>
-        </div>
-    </div>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
-    </section>
-
-   <section>
-    <div class="dif4">
-        <h4>WoW you've seen everything about me. <br><br>Lets Go Back:</h4>
-        <a href="#intro">Back</a>
-    </div>
-   </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script>
-        const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-    </script>
-
-    <script>
-    window.addEventListener('load', () => {
-        const timeline = gsap.timeline();
-
-        // Preloader animation
-        timeline.to("#preloader-content p", { opacity: 0, duration: 1 });
-        timeline.to("#preloader", { height: 0, duration: 1, onComplete: () => {
-            document.getElementById('preloader').style.display = 'none';
-        }});
-
-        // Animate header elements
-        timeline.from("header", { opacity: 0, y: -50, duration: 1 });
-
-        // Animate section elements
-        timeline.from("#intro", { opacity: 0, y: 50, duration: 1 });
-        timeline.from(".box", { opacity: 0, y: 50, stagger: 0.2, duration: 1 });
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const container = document.getElementById('container');
-        const cursor = document.createElement('div');
-        cursor.classList.add('cursor');
-        container.appendChild(cursor);
     
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            
-            cursor.style.left = `${x}px`;
-            cursor.style.top = `${y}px`;
-            
-            const color1 = 'rgb(51, 43, 41)'; // Custom color 1
-            const color2 = 'rgb(22, 22, 22)'; // Custom color 2
-            container.style.background = `radial-gradient(circle at ${x}px ${y}px, ${color1} 0%, ${color2} 50%, black 100%)`;
+</head>
+<body>
+    <header>
+        <a href="">ABOUT</a>
+        <a href="">ARCHIVE</a>
+        <a href="">BLOGS</a>
+        <a href="">CONTACT</a>
+    </header>
+    <h2>KHUSHAL<br>SHARMA</h2>
+    <h1>CREATIVE<br>DEVLOPER</h1>
+    <h3>Full website in devlopment</h3>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-        });
-</script>
+        
+    </script>
+    <button id="toggleHeader"><i class="fas fa-bars"></i></button>
 
+    <script>
+        document.getElementById("toggleHeader").addEventListener("click", function() {
+            document.querySelector("header").classList.toggle("active");
+        });
+    </script>
+    
 </body>
 </html>
