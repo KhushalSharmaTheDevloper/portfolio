@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
+        <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bahiana&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
@@ -19,6 +24,9 @@
     </header>
     <h2>KHUSHAL<br>SHARMA</h2>
     <h1>CREATIVE<br>DEVLOPER</h1>
+    <div class="craft">
+      <h4>Crafting <span>outstanding </span>websites<br> that gives a <span>lasting<br></span> impact</h4>
+    </div>
     <h3>Full website in devlopment</h3>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -42,69 +50,8 @@
             document.querySelector("header").classList.toggle("active");
         });
     </script>
-    <div class="stack-area">
-    <div class="right">
-        <div class="card">
-          <div class="sub">Backend</div>
-          <div class="content">python,java,c</div>
-        </div>
-        <div class="card">
-          <div class="sub">front-end</div>
-          <div class="content">html,css</div>
-        </div>
-        <div class="card">
-          <div class="sub">language</div>
-          <div class="content">javascript,react</div>
-        </div>
-        <div class="card">
-          <div class="sub">language</div>
-          <div class="content">,c++ robotics</div>
-        </div>
-        <div class="card">
-            <div class="sub">language</div>
-            <div class="content">C++ robotics</div>
-        </div>
-      </div>
-    </div>
+   
 
-    <script>
-      let cards = document.querySelectorAll(".card");
-
-      let stackArea = document.querySelector(".stack-area");
-
-      function rotateCards() {
-        let angle = 0;
-        cards.forEach((card, index) => {
-          if (card.classList.contains("away")) {
-            card.style.transform = `translateY(-120vh) rotate(-48deg)`;
-          } else {
-            card.style.transform = ` rotate(${angle}deg)`;
-            angle = angle - 10;
-            card.style.zIndex = cards.length - index;
-          }
-        });
-      }
-
-      rotateCards();
-
-      window.addEventListener("scroll", () => {
-        let distance = window.innerHeight * 0.5;
-
-        let topVal = stackArea.getBoundingClientRect().top;
-
-        let index = -1 * (topVal / distance + 1);
-
-        index = Math.floor(index);
-
-        for (i = 0; i < cards.length; i++) {
-          if (i <= index) {
-            cards[i].classList.add("away");
-          } else {
-            cards[i].classList.remove("away");
-          }
-        }
-        rotateCards();
-      });
-    </script>
+    
 </body>
 </html>
