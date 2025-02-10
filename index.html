@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khushal Sharma</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
@@ -25,7 +25,18 @@
     <h2>KHUSHAL<br>SHARMA</h2>
     <h1>CREATIVE<br>DEVLOPER</h1>
     <div class="craft">
-      <h4>Crafting <span>outstanding </span>websites<br> that gives a <span>lasting<br></span> impact</h4>
+      <h4>Crafting <span>outstanding </span>websites<br> that gives a <span>lasting<br></span> impact<button>See Services &#8599</button></h4>
+    </div>
+    <div class="langauges">
+      <h5>Language I Work With:</h5>
+      <ul>
+        <li>HTML CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>PYTHON</li>
+        <li>C</li>
+        <li>JAVA</li>
+        <li>C++ Robotics</li>
+      </ul>
     </div>
     <h3>Full website in devlopment</h3>
     <script>
@@ -52,6 +63,17 @@
     </script>
    
 
-    
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+    <script>
+      // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+    </script>
 </body>
 </html>
