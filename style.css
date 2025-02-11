@@ -1,369 +1,47 @@
-/* Import custom font */
-@font-face {
-    font-family: 'font';
-    src: url('fonts/bueno-regular.ttf') format('truetype');
-}
-
-/* Global styles */
-body {
-    font-family: 'font', sans-serif;
-    background-color: #f4fce9;
-    margin: 0;
-    padding: 0;
-
-}
-
-
-@keyframes second {
-    from {
-        scale: 0.1;
-        margin-left: 5000px;
-    }
-    to {
-        scale: 1;
-        
-    }
-}
-
-
-@keyframes third {
-    from {
-        scale: 0.1;
-        margin-right: 5000px;
-    }
-    to {
-        scale: 1;
-        
-    }
-}
-
-
-/* Headings */
 h1 {
-    overflow: hidden;
-    animation: second 4s;
-    color: rgb(35, 86, 183);
-    text-align: center;
-    font-size: 18rem;
-    margin-top: 10px;
-    text-shadow: 8px 2px 1px rgb(37, 217, 214);
-
+    text-align: right;
+    font-size: 5rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100000;
+    margin-top: 400px;
 }
+
+a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(168, 168, 168);
+    font-weight: 1000;
+    transition: ease-in-out 0.3s;
+    transition-timing-function: ease-in-out 0.3s;
+    overflow: hidden;
+}
+a:hover {
+    color: black;
+    transition: ease-in-out 0.3s;
+    transition-timing-function: ease-in-out 0.3s;
+    overflow: hidden;
+    font-size: 2.2rem;
+}
+
 
 h2 {
-    color: rgb(56, 115, 226);
     text-align: center;
-    font-size: 3rem;
-    animation: third 2s;
-}
-
-h3 {
-    text-align: center;
-    font-size: 1.4rem;
-}
-
-@keyframes fouth {
-    from {
-        margin-right: -1000px;
-    }
-    to {
-       margin-right: 10;
-    }
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fouth 3s;
-    text-align: right;
-    font-size: 1.4rem;
-    padding: 12px;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s ease-in-out;
-}
-
-/* Hide header on mobile */
-@media (max-width: 768px) {
-    header {
-        transform: translateY(-100%);
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background: rgba(0, 0, 0, 0.9);
-        color: white;
-        padding: 15px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-}
-
-/* Show header when active */
-header.active {
-    transform: translateY(0);
-}
-
-/* Toggle Button (Icon) */
-#toggleHeader {
-    display: none;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: opacity 0.3s;
-}
-
-#toggleHeader:hover {
-    opacity: 0.7;
-}
-
-/* Show button only on mobile */
-@media (max-width: 768px) {
-    #toggleHeader {
-        display: block;
-    }
-}
-
-/* Animated Underline for Links */
-a {
-    margin: 6px;
-    text-decoration: none;
-    color: rgb(38, 199, 208);
-    position: relative;
-    font-size: 22px;
-    font-weight: bold;
-    display: inline-block;
-    padding: 8px 0;
-}
-
-a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background-color: rgb(107, 107, 213);
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-a:hover::after,
-a:focus::after {
-    width: 100%;
-    left: 0;
-}
-
-/* Responsive Design - Slightly Bigger Elements */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 12rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    a {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 9rem;
-    }
-
-    h2 {
-        font-size: 2.8rem;
-    }
-
-    h3 {
-        font-size: 1.8rem;
-    }
-
-    a {
-        font-size: 24px;
-        padding: 12px 0;
-    }
-
-    a::after {
-        height: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 7rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    h3 {
-        font-size: 1.6rem;
-    }
-
-    a {
-        font-size: 22px;
-        padding: 14px 0;
-    }
-}
-
-
-.stack-area {
-    width: 100%;
-    height: 300vh;
-    position: relative;
-    background: white;
-    display: flex;
-  }
-  .left {
-    height: 100vh;
-    flex-basis: 50%;
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
-  .right {
-    height: 100vh;
-    flex-basis: 50%;
-    position: sticky;
-    top: 0;
-  }
-  /*Styling for the left elements content starts here...*/
-  .left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    align-items: center;
-    flex-direction: column;
-  }
-  .title {
-    width: 420px;
-    font-size: 84px;
-    font-family: poppins;
-    font-weight: 700;
-    line-height: 88px;
-  }
-  .sub-title {
-    width: 420px;
-    font-family: poppins;
-    font-size: 14px;
-    margin-top: 30px;
-  }
-  .sub-title button {
-    font-family: poppins;
-    font-size: 14px;
-    padding: 15px 30px;
-    background: black;
-    color: white;
-    border-radius: 8mm;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  /*Styling for the left elements content ends here...*/
-
-  .card {
-    width: 350px;
-    height: 350px;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: calc(50% - 175px);
-    left: calc(50% - 175px);
-    transition: 0.5s ease-in-out;
-  }
-  .card:nth-child(1) {
-    background: rgb(64, 122, 255);
-  }
-  .card:nth-child(2) {
-    background: rgb(221, 62, 88);
-  }
-  .card:nth-child(3) {
-    background: rgb(186, 113, 245);
-  }
-  .card:nth-child(4) {
-    background: rgb(247, 92, 208);
-  }
-
-  /*Styling for the card content starts here...*/
-  .card {
-    box-sizing: border-box;
-    padding: 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .sub {
-    font-family: poppins;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .content {
-    font-family: poppins;
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 54px;
-  }
-  /*Styling for the card content ends here...*/
-
-  .away {
-    transform-origin: bottom left;
-  }
-
-.craft span{
-    font-family: Great Vibes;
-}
-.craft h4 {
-    font-family: Bahiana;
-    text-align: left;
-    margin-left: 100px;
-    font-size: 8rem;
-}
-
-.craft {
-    background-color: rgb(172, 172, 172);
-    animation: second 5s;
-    height:700px ;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
     
 }
-
-.craft button {
-    border: none;
-    outline: none;
-    width: 170px;
-    height: 60px;
-    margin-left: 50px;
-    border-radius: 22px;
-    font-size: 1.3rem;
-    transition: ease-in-out 1s;
-    transition-timing-function: ease-in-out 1s;
-    background-color: rgb(247, 177, 177);
+.myself {
+    margin-top: 300px;
 }
-
-.craft button:hover {
-    scale: 1.4;
-    transition: ease-in-out 1s;
-    transition-timing-function: ease-in-out 1s;
+p {
+    font-family: sans-serif;
+    font-size: 4rem;
+    font-weight: 1000;
+    text-align: center;
+    letter-spacing:0.1px;
+    line-height: 60px;
 }
-
-h5 {
-    margin-left: 100px;
-    font-size: 8rem;
-}
-
-.langauges li {
-    font-size: 5rem;
-    margin-left: 100px;
-} 
