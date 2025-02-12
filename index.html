@@ -5,61 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khushal Sharma</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
 
+    <style>
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            width: 120%;
+            height: 100%;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            overflow: hidden;
+        }
 
-</head>
+        /* Rolling numbers */
+        .rolling-numbers {
+            font-size: 18rem;  /* Increased size */
+            font-weight: bold;
+            position: relative;
+            height: 440px;
+            width: 1000px;
+            text-align: center;
+            overflow: hidden;
+        }
 
-<style>
-    h1 {
-        text-align: right;
-        font-size: 5rem;
-        font-family: sans-serif;
-        text-transform: uppercase;
-        font-weight: 100000;
-        margin-top: 400px;
-    }
-    
-    a {
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-family: sans-serif;
-        color: rgb(168, 168, 168);
-        font-weight: 1000;
-        transition: ease-in-out 0.3s;
-        transition-timing-function: ease-in-out 0.3s;
-        overflow: hidden;
-    }
-    a:hover {
-        color: black;
-        transition: ease-in-out 0.3s;
-        transition-timing-function: ease-in-out 0.3s;
-        overflow: hidden;
-        font-size: 2.2rem;
-    }
-    
-    
-    h2 {
-        text-align: center;
-        font-family: sans-serif;
-        font-size: 1rem;
-        font-weight: 100;
+        .numbers {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Main Content */
+        #content {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        h1 {
+            overflow: hidden;
+            text-align: right;
+            font-size: 5rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 300px;
+        }
         
-    }
-    .myself {
-        margin-top: 300px;
-    }
-    p {
-        font-family: sans-serif;
-        font-size: 4rem;
-        font-weight: 1000;
-        text-align: center;
-        letter-spacing:0.1px;
-        line-height: 60px;
-    }
-</style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes load {
+            from { margin-right: -1000px; opacity: 0.2; }
+            to { margin-right: 0; opacity: 1; }
+        }
+        @keyframes load2 {
+            from { margin-top: -1000px; }
+            to { margin-top: 0px; }
+        }
+        @keyframes load3 {
+            from { margin-bottom: -100px; overflow: hidden; }
+            to { margin-bottom: 0; overflow: hidden; }
+        }
+        header {
+            animation: load2 2s;
+            position: sticky;
+            top: 1px;
+        }
+        a {
+            animation: load2 2s;
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: rgb(168, 168, 168);
+            font-weight: 1000;
+            transition: ease-in-out 0.3s;
+        }
+        a:hover {
+            color: black;
+            font-size: 2.2rem;
+        }
+        h2 {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+        .myself {
+            margin-top: 300px;
+            letter-spacing: -1px;
+        }
+        p {
+            font-size: 2rem;
+            font-weight: 1000;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 60px;
+            padding: 24px;
+            font-family: "Inter", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        H3 {
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            font-family: "Inter", serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 4rem;
+        }
+        #h3 {
+            font-size: 3rem;
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            margin-top: 100px;
+        }
+    </style>
+</head>
 <header>
     <img src="logo.svg" alt="error-loading">
     <a href="">Bio,</a>
@@ -68,32 +151,82 @@
     <a href="">Contact</a>
 </header>
 <body>
-    <section class="intro">
-        <div class="container_intro">
-            <div class="wrapper">
-                <h1>Hey, I'm Khushal Sharma - A 14 Year <br>old Indian Software Enginner</h1>
-            </div>
-        </div>
-    </section>
 
+<!-- Preloader -->
+<div id="preloader">
+    <div class="rolling-numbers">
+        <div class="numbers">10%</div>
+        <div class="numbers">15%</div>
+        <div class="numbers">30%</div>
+        <div class="numbers">76%</div>
+        <div class="numbers">98%</div>
+        <div class="numbers">100%</div>
+        <div class="numbers"></div>
+        <div class="numbers"></div>
+        <div class="numbers">DONE</div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="intro">
+    <div class="container_intro">
+        <div class="wrapper">
+            <h1>Hey, I'm Khushal Sharma - A 14-Year-Old Indian Software Engineer</h1>
+        </div>
+    </div>
+</section>
 <section class="myself">
     <h2>MYSELF</h2>
-    <p>I'm Khushal Sharma, a 14-year-old software developer from India, passionate about coding, AI, and building cool tech. I love experimenting with Python, C, C++, Java, and JavaScript, creating everything from AI chatbots to smart city systems. Whether it's designing slick web apps, coding up simulations, or messing with hardware like Arduino and ESP, I’m always up for a challenge.When I’m not coding, you’ll probably find me gaming on my PS4 or exploring new tech trends. 🚀</p>
+    <p>I'm Khushal Sharma, a 14-year-old software developer from India. I love experimenting with Python, C, C++, Java, and JavaScript. Whether it's designing slick web apps, coding up simulations, or messing with hardware like Arduino and ESP, I’m always up for a challenge. When I’m not coding, you’ll probably find me gaming on my PS4 or exploring new tech trends. 🚀</p>
+</section>
+<section class="tech">
+    <h2>Technologies</h2>
+    <H3>PYTHON/ JAVA/ C/ JAVASCRIPT/ GSAP</H3>
 </section>
 
+<section class="contact">
+    <h2>CONTACT</h2>
+    <h3 class= "h3" id = "h3">khushalsharmasgaming@GMAIL.COM</h3>
+</section>
+</div>
+<script>
+    // Rolling number animation
+    const numbers = document.querySelectorAll(".numbers");
+    gsap.set(numbers, { y: "100%" });
 
+    gsap.to(numbers, {
+        y: "-100%",
+        duration: 2,
+        stagger: 0.5,
+        ease: "power2.out",
+        onComplete: removePreloader
+    });
 
-    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
-    <script>
-        // Initialize Lenis
-const lenis = new Lenis({
-    autoRaf: true,
-  });
+    function removePreloader() {
+        setTimeout(() => {
+            gsap.to("#preloader", {
+                opacity: 0,
+                duration: 1,
+                onComplete: function () {
+                    document.getElementById("preloader").style.display = "none";
+                    gsap.to("#content", { opacity: 1, duration: 1 });
+                }
+            });
+        }, 1000);
+    }
+</script>
+<script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
+<script>
+    // Initialize Lenis
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
   
-  // Listen for the scroll event and log the event data
-  lenis.on('scroll', (e) => {
-    console.log(e);
-  });
-    </script>
+    // Listen for the scroll event
+    lenis.on('scroll', (e) => {
+      console.log(e);
+    });
+  </script>
+  
 </body>
 </html>
